@@ -1,15 +1,3 @@
-@font-face {
-  font-family: "GmarketSansMedium";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "GmarketSansBold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -35,6 +23,18 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -53,7 +53,7 @@ html, body {
 body {
   line-height: 1;
   letter-spacing: -1px;
-  min-width: 1280px;
+  min-width: 320px;
   overflow-x: hidden;
 }
 
@@ -100,7 +100,6 @@ table {
   width: 120px;
   overflow: hidden;
   display: inline-block;
-  /* transform: rotate(89deg);*/
 }
 #wrap .section-text-center #container-c #circle {
   position: relative;
@@ -125,7 +124,7 @@ table {
   text-transform: uppercase;
 }
 #wrap main .sec01 {
-  width: 100%;
+  width: 100% !important;
   height: 100vh;
 }
 #wrap main .sec01 .scroll-downs {
@@ -221,6 +220,13 @@ table {
   text-align: right;
   background: #121212;
 }
+#wrap main .sec01 .line .txt-bottom svg {
+  width: 790px;
+  height: 120px;
+}
+#wrap main .sec01 .line .txt-bottom svg:first-child {
+  width: 700px;
+}
 #wrap main .sec02 {
   margin: 150px 50px 0;
   position: relative;
@@ -263,6 +269,7 @@ table {
   color: #fff;
   opacity: 0;
   font-size: 20px;
+  line-height: 1.7;
 }
 #wrap main .sec02 .about .right {
   color: #fff;
@@ -271,6 +278,9 @@ table {
   margin: 50px 0 0 100px;
   opacity: 0;
   font-size: 20px;
+}
+#wrap main .sec02 .about .right div.deps03 {
+  line-height: 1.8;
 }
 #wrap main .sec02 .about .right div b {
   display: block;
@@ -356,6 +366,10 @@ table {
   margin-bottom: 50px;
   line-height: 100px;
 }
+#wrap main .sec03 .skill_box ul li p {
+  font-size: 20px;
+  margin-top: 15px;
+}
 #wrap main .sec03 .skill_box ul li:nth-of-type(4n) {
   margin-right: 0;
 }
@@ -392,8 +406,8 @@ table {
 #wrap main .sec03 .skill_box ul li .chart .javascript {
   max-width: 90px;
   max-height: 90px;
-  top: 45px;
-  left: 45px;
+  top: 50px;
+  left: 50px;
 }
 #wrap main .sec03 .skill_box ul li .chart .javascript + svg .outer {
   stroke: #f0e040;
@@ -417,30 +431,30 @@ table {
   stroke: #563d7c;
 }
 #wrap main .sec03 .skill_box ul li .chart .react {
-  top: 48px;
-  left: 44px;
+  top: 51px;
+  left: 46px;
 }
 #wrap main .sec03 .skill_box ul li .chart .react + svg .outer {
   stroke: #2596dc;
 }
 #wrap main .sec03 .skill_box ul li .chart .vue {
   top: 60px;
-  left: 36px;
+  left: 45px;
 }
 #wrap main .sec03 .skill_box ul li .chart .vue + svg .outer {
   stroke: #3fb984;
 }
 #wrap main .sec03 .skill_box ul li .chart .node {
   top: 45px;
-  left: 36px;
+  left: 45px;
 }
 #wrap main .sec03 .skill_box ul li .chart .node + svg .outer {
   stroke: #80bc01;
 }
 #wrap main .sec03 .skill_box ul li .chart .pwa {
-  top: 68px;
-  left: 29px;
-  max-width: 130px;
+  top: 70px;
+  left: 35px;
+  max-width: 125px;
 }
 #wrap main .sec03 .skill_box ul li .chart .pwa + svg .outer {
   stroke: #5a0fc8;
@@ -503,7 +517,7 @@ table {
   text-align: center;
   opacity: 0;
   position: relative;
-  top: 130px;
+  top: 160px;
 }
 #wrap main .sec04 .scroll-slider {
   position: relative;
@@ -676,6 +690,7 @@ table {
 }
 #wrap main .sec04 .txt ul li {
   line-height: 1.5;
+  display: table;
 }
 #wrap main .sec04 .txt ul li.site_title {
   font-size: 30px;
@@ -684,16 +699,109 @@ table {
 }
 #wrap main .sec04 .txt ul li b {
   font-weight: 600;
-  display: inline-block;
+  display: table-cell;
 }
-#wrap main .sec04 .txt a {
+#wrap main .sec04 .txt .button2 {
+  position: relative;
   display: inline-block;
+  padding: 20px 40px;
+  border-radius: 4px;
   text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  margin: 45px 0 0;
+  color: #03e9f4;
+  filter: hue-rotate(0deg);
+  border: 2px solid #fff;
+  transition: all 0.1s linear;
+}
+#wrap main .sec04 .txt .button2 a {
+  display: block;
   color: #fff;
-  border: 1px solid #fff;
-  padding: 15px 20px;
-  border-radius: 20px;
-  margin: 50px 0 0;
+  text-decoration: none;
+}
+#wrap main .sec04 .txt .button2:hover {
+  border: 1px solid transparent;
+}
+#wrap main .sec04 .txt .button2:hover span {
+  position: absolute;
+  display: block;
+}
+#wrap main .sec04 .txt .button2:hover span:nth-child(1) {
+  filter: hue-rotate(0deg);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #3a86ff);
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+#wrap main .sec04 .txt .button2:hover span:nth-child(2) {
+  filter: hue-rotate(60deg);
+  top: -100%;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #3a86ff);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+#wrap main .sec04 .txt .button2:hover span:nth-child(3) {
+  filter: hue-rotate(120deg);
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background: linear-gradient(270deg, transparent, #3a86ff);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate3 {
+  0% {
+    right: -100%;
+    height: 3px;
+  }
+  50%, 100% {
+    height: 2px;
+    right: 100%;
+  }
+}
+#wrap main .sec04 .txt .button2:hover span:nth-child(4) {
+  filter: hue-rotate(300deg);
+  bottom: -100%;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #3a86ff);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
+#wrap main .sec04 .txt .button2:hover a {
+  display: block;
+  color: #d2bdff;
 }
 #wrap main .sec05 {
   width: 100%;
@@ -725,6 +833,7 @@ table {
   -webkit-transform: translateY(30px);
   transition: all 0.2s ease;
   color: #fff;
+  letter-spacing: 2px;
 }
 #wrap main .sec05 h2.sec2_tit1 {
   font-size: 80px;
@@ -873,36 +982,124 @@ table {
     stroke-dashoffset: 401;
   }
 }
-.page {
-  height: 600px;
+@media (max-width: 1600px) {
+  #wrap main .sec01 .line .txt-bottom svg {
+    width: 690px;
+    height: 100px;
+  }
+  #wrap main .sec01 .line .txt-bottom svg:first-child {
+    width: 600px;
+  }
+  #wrap main .sec02 .title {
+    font-size: 70px;
+  }
+  #wrap main .sec02 .title h3 {
+    font-size: 70px;
+  }
+  #wrap main .sec02 .about {
+    padding: 50px 0 0;
+  }
+  #wrap main .sec02 .about .left .txt {
+    font-size: 18px;
+  }
+  #wrap main .sec02 .about .left .profile {
+    width: 300px;
+    height: 300px;
+  }
+  #wrap main .sec02 .about .right div {
+    font-size: 18px;
+  }
+  #wrap main .sec02 .about .right div b {
+    font-size: 25px;
+  }
 }
-
-.page1 {
-  background: #ccc;
-  position: relative;
+@media (max-width: 1023px) {
+  #wrap main .sec01 .line .txt-bottom {
+    top: 40%;
+    left: 0;
+    bottom: auto;
+    right: auto;
+    text-align: center;
+  }
+  #wrap main .sec01 .line .txt-bottom svg {
+    width: 40%;
+    height: 100%;
+  }
+  #wrap main .sec01 .line .txt-bottom svg:first-child {
+    width: 50%;
+  }
+  #wrap main .sec02 .title {
+    font-size: 55px;
+  }
+  #wrap main .sec02 .title h3 {
+    font-size: 55px;
+  }
+  #wrap main .sec02 .about {
+    padding: 0;
+    display: block;
+  }
+  #wrap main .sec02 .about .right {
+    text-align: center;
+  }
+  #wrap main .sec02 .about .right .deps01 {
+    display: none;
+  }
+  #wrap main .sec03 .skill_box ul li .chart img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+  #wrap main .sec03 .skill_box ul li .chart .css {
+    max-width: 75px;
+  }
+  #wrap main .sec03 .skill_box ul li .chart .javascript {
+    max-width: 75px;
+  }
 }
-.page1 img {
-  max-width: 100%;
+@media (max-width: 768px) {
+  #wrap main .sec01 .line .txt-bottom {
+    top: 40%;
+    left: 0;
+    bottom: auto;
+    right: auto;
+    text-align: center;
+  }
+  #wrap main .sec01 .line .txt-bottom svg {
+    width: 40%;
+    height: 100%;
+  }
+  #wrap main .sec01 .line .txt-bottom svg:first-child {
+    width: 50%;
+  }
+  #wrap main .sec02 .title {
+    font-size: 40px;
+  }
+  #wrap main .sec02 .title h3 {
+    font-size: 40px;
+  }
+  #wrap main .sec02 .about .right div {
+    margin: 50px 0 0 0;
+    position: relative;
+    left: 100px;
+    font-size: 16px;
+  }
+  #wrap main .sec02 .about .right div b {
+    font-size: 22px;
+  }
+  #wrap main .sec02 .about .left {
+    margin: 0 auto;
+  }
+  #wrap main .sec02 .about .left .txt {
+    font-size: 16px;
+  }
 }
-.page1 .box1 {
-  width: 200px;
-  position: absolute;
-  top: 50%;
-  right: 40px;
-  transition: all 5s cubic-bezier(0, 0.91, 1, 1);
-  z-index: 1;
-}
-.page1 .box2 {
-  width: 300px;
-  position: absolute;
-  top: 50%;
-  right: 150px;
-  transition: all 5s cubic-bezier(0, 0.91, 1, 1);
-  z-index: 1;
-}
-
-.page2 {
-  background: #ccc;
+@media (max-width: 414px) {
+  #wrap main .sec01 .line .txt-bottom svg {
+    width: 400px;
+    height: 65px;
+  }
+  #wrap main .sec01 .line .txt-bottom svg:first-child {
+    width: 360px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
